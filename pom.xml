@@ -15,14 +15,26 @@
 	</parent>
 
 	<modules>
-		<module>SpringCloud-eureka</module>
+		<module>SpringCloud-ribbon</module>
+		<module>SpringCloud-Service</module>
+		<module>SpringCloud-Server</module>
 	</modules>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<!-- junit -->
-		<junit.version>4.11</junit.version>
 	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>Edgware.SR1</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 
 	<!-- 指定Maven仓库 -->
 	<repositories>
