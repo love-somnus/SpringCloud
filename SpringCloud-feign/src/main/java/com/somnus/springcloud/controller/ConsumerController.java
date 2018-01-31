@@ -5,16 +5,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.somnus.springcloud.ComputeService;
+import com.somnus.springcloud.ComputeClient;
 
 @RestController
 public class ConsumerController {
 
     @Autowired
-    private ComputeService computeService;
+    private ComputeClient computeClient;
 
     @RequestMapping(value = "/add", method = RequestMethod.GET)
-    public String add() {
-        return computeService.addService();
+    public Integer add() {
+        return computeClient.add(10, 20);
     }
+
 }
