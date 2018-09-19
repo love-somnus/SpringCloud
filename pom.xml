@@ -21,11 +21,21 @@
 		<module>SpringCloud-03-Consumer-Ribbon</module>
 		<module>SpringCloud-03-Consumer-Feign</module>
 		<module>SpringCloud-04-Zuul</module>
+		<module>SpringCloud-05-Config-Server</module>
+		<module>SpringCloud-05-Config-Client</module>
 	</modules>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
+	
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<optional>true</optional>
+		</dependency>
+	</dependencies>
 
 	<dependencyManagement>
 		<dependencies>
