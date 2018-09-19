@@ -1,5 +1,8 @@
 spring:
   application:
     name: spring-cloud-config-client
+  zipkin: 
+    base-url: http://121.43.162.28:9411    
+    
 server: 
   port: 8889

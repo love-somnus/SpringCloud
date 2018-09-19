@@ -12,7 +12,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.0.4.RELEASE</version>
+		<version>2.0.1.RELEASE</version>
 	</parent>
 
 	<modules>
@@ -23,10 +23,13 @@
 		<module>SpringCloud-04-Zuul</module>
 		<module>SpringCloud-05-Config-Server</module>
 		<module>SpringCloud-05-Config-Client</module>
+		<module>SpringCloud-06-Zipkin</module>
 	</modules>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.8</java.version>
 	</properties>
 	
 	<dependencies>
@@ -49,11 +52,11 @@
 		</dependencies>
 	</dependencyManagement>
 
-	<!-- 指定Maven仓库 -->
+	<!-- 公共仓库地址 -->
 	<repositories>
 		<repository>
 			<id>aliyun</id>
-			<name>aliyun</name>
+			<name>aliyun Repositories</name>
 			<url>http://maven.aliyun.com/nexus/content/groups/public/</url>
 			<releases>
 				<enabled>true</enabled>
@@ -63,17 +66,28 @@
 			</snapshots>
 		</repository>
 	</repositories>
-
+	<!-- 公共插件仓库地址 -->
+	<pluginRepositories>
+		<pluginRepository>
+			<id>aliyun</id>
+			<name>aliyun Repositories</name>
+			<url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</pluginRepository>
+	</pluginRepositories>
+	
 	<build>
 		<plugins>
 			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<configuration>
-					<target>1.8</target>
-					<resource>1.8</resource>
-				</configuration>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
 	</build>
+
 </project>
