@@ -24,6 +24,8 @@
 		<module>SpringCloud-05-Config-Server</module>
 		<module>SpringCloud-05-Config-Client</module>
 		<module>SpringCloud-06-Zipkin</module>
+		<module>SpringCloud-07-Admin-Server</module>
+		<module>SpringCloud-07-Admin-Client</module>
 	</modules>
 
 	<properties>
@@ -49,6 +51,33 @@
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
+			
+			<dependency>
+	            <groupId>io.zipkin.java</groupId>
+	            <artifactId>zipkin-server</artifactId>
+	            <version>2.10.1</version>
+	        </dependency>
+	        <dependency>
+	            <groupId>io.zipkin.java</groupId>
+	            <artifactId>zipkin-autoconfigure-ui</artifactId>
+	            <version>2.10.1</version>
+	        </dependency>
+			
+			<dependency>
+	            <groupId>org.jolokia</groupId>
+	            <artifactId>jolokia-core</artifactId>
+	            <version>1.6.0</version>
+	        </dependency>
+	        <dependency>
+	            <groupId>de.codecentric</groupId>
+	            <artifactId>spring-boot-admin-starter-server</artifactId>
+	            <version>2.0.2</version>
+	        </dependency>
+	        <dependency>
+            	<groupId>de.codecentric</groupId>
+            	<artifactId>spring-boot-admin-starter-client</artifactId>
+            	<version>2.0.2</version>
+        	</dependency>
 		</dependencies>
 	</dependencyManagement>
 

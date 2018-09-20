@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: spring-cloud-admin-server
+  zipkin:
+    base-url: http:/121.43.162.28:9411
+
+management:
+  endpoint:
+    health:
+      show-details: always
+  #endpoints:
+    #web:
+      #exposure:
+        #include: ["health", "info"]      
+          
+server:
+  port: 8084
+
+#加入注册中心，实现高可用
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://121.43.162.28:8761/eureka/
