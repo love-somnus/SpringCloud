@@ -10,5 +10,5 @@ import com.somnus.springcloud.hystrix.AdminServiceHystrix;
 public interface AdminService {
 
 	@GetMapping("hi")
-    public String sayHi(@RequestParam(value = "message") String message);
+	public String sayHi(@RequestParam(value = "message") String message);
 }

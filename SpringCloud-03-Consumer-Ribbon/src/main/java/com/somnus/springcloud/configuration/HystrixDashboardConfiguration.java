@@ -8,14 +8,15 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class HystrixDashboardConfiguration {
 
-    @Bean
-    public ServletRegistrationBean<HystrixMetricsStreamServlet> getServlet() {
-        HystrixMetricsStreamServlet streamServlet = new HystrixMetricsStreamServlet();
-        ServletRegistrationBean<HystrixMetricsStreamServlet> registrationBean = new ServletRegistrationBean<>(streamServlet);
-        registrationBean.setLoadOnStartup(1);
-        registrationBean.addUrlMappings("/hystrix.stream");
-        registrationBean.setName("HystrixMetricsStreamServlet");
-        return registrationBean;
-    }
-    
+	@Bean
+	public ServletRegistrationBean<HystrixMetricsStreamServlet> getServlet() {
+		HystrixMetricsStreamServlet streamServlet = new HystrixMetricsStreamServlet();
+		ServletRegistrationBean<HystrixMetricsStreamServlet> registrationBean = new ServletRegistrationBean<>(
+				streamServlet);
+		registrationBean.setLoadOnStartup(1);
+		registrationBean.addUrlMappings("/hystrix.stream");
+		registrationBean.setName("HystrixMetricsStreamServlet");
+		return registrationBean;
+	}
+
 }

@@ -20,10 +20,10 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 public class ConfigController {
-	
-	@Value(value="${jdbc.password}")
+
+	@Value(value = "${jdbc.password}")
 	private String password;
-	
+
 	@GetMapping("hi")
 	public String hi() {
 		return password;

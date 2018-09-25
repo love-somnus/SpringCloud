@@ -7,7 +7,7 @@ spring:
 server:
   port: 8765
 
-feign: 
+feign:
   hystrix:
     enabled: true
 
