@@ -10,8 +10,8 @@ spring:
       label: master
       server:
         git:
-          uri: https://github.com/love-somnus/spring-cloud-config
-          search-paths: respo
+          uri: https://github.com/love-somnus/SpringCloud
+          search-paths: config-repository
           username: love-somnus
           password: miss332512
           
