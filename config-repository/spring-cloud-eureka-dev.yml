@@ -1,6 +1,4 @@
 spring:
-  application:
-    name: spring-cloud-eureka
   zipkin:
     base-url: http://121.43.162.28:9411
 server:
