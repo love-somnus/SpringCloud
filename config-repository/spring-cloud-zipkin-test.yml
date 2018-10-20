@@ -6,3 +6,8 @@ management:
     web:
       server:
         auto-time-requests: false
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://121.43.162.28:8761/eureka/

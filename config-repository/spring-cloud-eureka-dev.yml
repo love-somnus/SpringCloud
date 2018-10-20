@@ -1,12 +1,13 @@
 spring:
   zipkin:
     base-url: http://121.43.162.28:9411
+
 server:
   port: 8761
 
 eureka:
   instance:
-    hostname: localhost
+    hostname: 121.43.162.28
   client:
     registerWithEureka: false #表示是否将自己注册到Eureka Server，默认为true
     fetchRegistry: false #表示是否从Eureka Server获取注册信息，默认为true
