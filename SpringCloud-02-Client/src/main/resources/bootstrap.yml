@@ -3,14 +3,17 @@ spring:
     name: spring-cloud-client
   cloud: 
     config:
-      name: spring-cloud-config
+      name: spring-cloud-client
       uri: http://121.43.162.28:8888
       label: master
       profile: dev
       discovery: #面向服务，允许被发现
         enabled: true
         serviceId: spring-cloud-config-server #这个名字是Config Server端的服务名字，不能瞎写
-          
+
+server:
+  port: 8762
+  
 eureka:
   client:
     serviceUrl:
