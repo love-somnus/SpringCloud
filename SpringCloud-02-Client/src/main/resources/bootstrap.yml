@@ -1,4 +1,6 @@
 spring:
+  application:
+    name: spring-cloud-client
   cloud: 
     config:
       name: spring-cloud-config
