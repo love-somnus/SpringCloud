@@ -21,12 +21,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class ConfigController {
 
-	@Value(value = "${jdbc.password}")
-	private String password;
+	@Value(value = "${spring.zipkin.base-url}")
+	private String url;
 
 	@GetMapping("hi")
 	public String hi() {
-		return password;
+		return url;
 	}
 
 }
