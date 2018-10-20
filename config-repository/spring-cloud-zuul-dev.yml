@@ -1,16 +1,6 @@
 spring:
-  application:
-    name: spring-cloud-zuul
   zipkin:
     base-url: http://121.43.162.28:9411
-
-server:
-  port: 8769
-
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://121.43.162.28:8761/eureka/
 
 zuul:
   routes:

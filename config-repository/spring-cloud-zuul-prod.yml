@@ -1,0 +1,12 @@
+spring:
+  zipkin:
+    base-url: http://121.43.162.28:9411
+
+zuul:
+  routes:
+    api-a:
+      path: /api/a/**
+      serviceId: spring-cloud-ribbon
+    api-b:
+      path: /api/b/**
+      serviceId: spring-cloud-feign

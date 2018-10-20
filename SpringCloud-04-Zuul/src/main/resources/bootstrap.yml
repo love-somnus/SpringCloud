@@ -1,7 +1,9 @@
 spring:
+  application:
+    name: spring-cloud-zuul
   cloud: 
     config:
-      name: spring-cloud-config
+      name: spring-cloud-zuul
       uri: http://121.43.162.28:8888
       label: master
       profile: dev
