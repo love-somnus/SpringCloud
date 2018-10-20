@@ -10,3 +10,15 @@ spring:
       discovery: #面向服务，允许被发现
         enabled: true
         serviceId: spring-cloud-config-server #这个名字是Config Server端的服务名字，不能瞎写
+
+server:
+  port: 8761
+
+eureka:
+  instance:
+    hostname: 121.43.162.28
+  client:
+    registerWithEureka: false #表示是否将自己注册到Eureka Server，默认为true
+    fetchRegistry: false #表示是否从Eureka Server获取注册信息，默认为true
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
