@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: spring-cloud-feign
+
+server:
+  port: 8763
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://121.43.162.28:8761/eureka/

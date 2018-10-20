@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: spring-cloud-zuul
+
+server:
+  port: 8765
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://121.43.162.28:8761/eureka/
