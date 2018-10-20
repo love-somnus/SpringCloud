@@ -4,7 +4,7 @@ spring:
   cloud: 
     config:
       name: spring-cloud-zipkin
-      uri: http://121.43.162.28:8888
+      #uri: http://121.43.162.28:8888
       label: master
       profile: dev
       discovery: #面向服务，允许被发现
