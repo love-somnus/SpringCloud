@@ -1,8 +1,6 @@
 spring:
   application:
     name: spring-cloud-config-server
-  zipkin:
-    base-url: http:/121.43.162.28:9411
         
   cloud:
     config:
@@ -14,12 +12,11 @@ spring:
           search-paths: config-repository
           username: love-somnus
           password: miss332512
-    inetutils:
-      ignoredInterfaces:
-        - docker0
-        - veth.*
-      preferredNetworks:
-        - 172.26
+  rabbitmq:
+    host: 121.43.162.28
+    port: 5672
+    username: guest
+    password: guest
 
 server:
   port: 8888
