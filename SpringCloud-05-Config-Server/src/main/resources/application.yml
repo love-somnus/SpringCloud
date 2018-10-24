@@ -14,7 +14,13 @@ spring:
           search-paths: config-repository
           username: love-somnus
           password: miss332512
-          
+    inetutils:
+      ignoredInterfaces:
+        - docker0
+        - veth.*
+      preferredNetworks:
+        - 172.26
+
 server:
   port: 8888
 
@@ -22,4 +28,7 @@ server:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://121.43.162.28:8761/eureka/
+      defaultZone: http://121.43.162.28:8760/eureka/,http://121.43.162.28:8761/eureka/
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.cloud.client.ip-address}:${server.port}
