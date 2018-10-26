@@ -25,12 +25,12 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:8760/eureka/,http://${eureka.instance.hostname}:8761/eureka/
+      defaultZone: http://${eureka.instance.ip-address}:8760/eureka/,http://${eureka.instance.ip-address}:8761/eureka/
   instance:
     ip-address: 121.43.162.28 # 指定此实例的ip
-    hostname: 121.43.162.28
+    #hostname: 121.43.162.28
     prefer-ip-address: true #注册时使用ip而不是主机名
-    instance-id: ${spring.application.name}:${eureka.instance.hostname}:${server.port}
+    instance-id: ${spring.application.name}:${eureka.instance.ip-address}:${server.port}
 
 management:
   endpoints:
