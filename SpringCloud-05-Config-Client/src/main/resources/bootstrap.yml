@@ -18,3 +18,8 @@ spring:
       discovery: #面向服务，允许被发现
         enabled: true
         service-id: spring-cloud-config-server #这个名字是Config Server端的服务名字，不能瞎写
+  rabbitmq:
+    host: 121.43.162.28
+    port: 5672
+    username: guest
+    password: guest
