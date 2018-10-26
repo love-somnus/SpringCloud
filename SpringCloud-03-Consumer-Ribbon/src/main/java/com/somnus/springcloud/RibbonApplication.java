@@ -7,6 +7,7 @@ import org.springframework.cloud.netflix.hystrix.EnableHystrix;
 import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboard;
 
 @EnableHystrix
+
 @EnableDiscoveryClient
 @SpringBootApplication
 @EnableHystrixDashboard

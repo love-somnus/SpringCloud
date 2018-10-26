@@ -8,10 +8,10 @@ management:
   endpoint:
     health:
       show-details: always
-  #endpoints:
-    #web:
-      #exposure:
-        #include: ["health", "info"]
+  endpoints:
+    web:
+      exposure:
+        include: "*"
           
 server:
   port: 8084
