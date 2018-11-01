@@ -12,6 +12,11 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 @SpringBootApplication
 public class ConfigServerApplication {
 
+	/**
+	 * POST http://121.43.162.28:8888/actuator/bus-refresh
+	 * POST http://121.43.162.28:9999/actuator/bus-refresh
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		SpringApplication.run(ConfigServerApplication.class, args);
 	}
