@@ -10,6 +10,9 @@ spring:
           username: love-somnus
           password: miss332512
     bus:
+      enabled: true
+      trace:
+        enabled: true
       refresh:
         enabled: true
   rabbitmq:
