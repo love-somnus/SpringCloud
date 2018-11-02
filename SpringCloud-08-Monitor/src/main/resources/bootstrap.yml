@@ -1,0 +1,20 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://121.43.162.28:8760/eureka/,http://121.43.162.28:8761/eureka/
+  instance:
+    #ip-address: 121.43.162.28
+    #hostname: 121.43.162.28
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.cloud.client.ip-address}:${server.port}
+
+spring:
+  cloud: 
+    config:
+      name: spring-cloud-ribbon
+      #uri: http://121.43.162.28:8888,http://121.43.162.28:9999
+      label: master
+      profile: dev
+      discovery: #面向服务，允许被发现
+        enabled: true
+        service-id: spring-cloud-config-server #这个名字是Config Server端的服务名字，不能瞎写

@@ -26,6 +26,7 @@
     <module>SpringCloud-06-Zipkin</module>
     <module>SpringCloud-07-Admin-Server</module>
     <module>SpringCloud-07-Admin-Client</module>
+    <module>SpringCloud-08-Monitor</module>
   </modules>
 
   <properties>
