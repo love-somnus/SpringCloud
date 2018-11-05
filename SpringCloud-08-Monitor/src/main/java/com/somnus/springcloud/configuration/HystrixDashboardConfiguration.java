@@ -14,7 +14,7 @@ public class HystrixDashboardConfiguration {
 		ServletRegistrationBean<HystrixMetricsStreamServlet> registrationBean = new ServletRegistrationBean<>(
 				streamServlet);
 		registrationBean.setLoadOnStartup(1);
-		registrationBean.addUrlMappings("/hystrix.stream");
+		registrationBean.addUrlMappings("/actuator/hystrix.stream");
 		registrationBean.setName("HystrixMetricsStreamServlet");
 		return registrationBean;
 	}

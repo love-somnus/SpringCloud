@@ -1,7 +1,7 @@
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://121.43.162.28:8760/eureka/,http://121.43.162.28:8761/eureka/
+      defaultZone: http://121.43.162.28:8761/eureka/,http://47.96.100.166:8761/eureka/
   instance:
     #ip-address: 121.43.162.28
     #hostname: 121.43.162.28

@@ -1,3 +1,6 @@
+server:
+  port: 8888
+
 spring:
   application:
     name: spring-cloud-config-server
@@ -10,13 +13,13 @@ management:
       cors:
         allowed-origins: "*"
         allowed-methods: "*"
----
-server:
-  port: 8888
-spring:
-  profiles: peer0
----
-server:
-  port: 9999
-spring:
-  profiles: peer1
+#---
+#server:
+#  port: 8888
+#spring:
+#  profiles: peer0
+#---
+#server:
+#  port: 9999
+#spring:
+#  profiles: peer1
