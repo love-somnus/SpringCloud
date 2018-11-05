@@ -27,14 +27,21 @@
       <artifactId>spring-cloud-starter-openfeign</artifactId>
     </dependency>
 
+    <!-- 熔断器 (feign本自带熔断，可不加，因为监控得加上) -->
     <dependency>
       <groupId>org.springframework.cloud</groupId>
-      <artifactId>spring-cloud-starter-zipkin</artifactId>
+      <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
     </dependency>
     
     <dependency>
       <groupId>org.springframework.cloud</groupId>
       <artifactId>spring-cloud-starter-config</artifactId>
+    </dependency>
+    
+    <!-- 开启监控 -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-actuator</artifactId>
     </dependency>
   </dependencies>
 </project>

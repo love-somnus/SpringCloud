@@ -3,7 +3,7 @@ spring:
     name: spring-cloud-monitor
 
 server:
-  port: 7777
+  port: 9696
 
 turbine:
   appConfig: spring-cloud-ribbon,spring-cloud-feign  #配置Eureka中的serviceId列表，表明监控哪些服务
@@ -11,14 +11,3 @@ turbine:
     clusterConfig: default  #需要监控的服务集群名
   clusterNameExpression: new String("default")
   combine-host-port: true
-
-#springcloud 中使用 hystrix-dashboard 进行监控的时候启动报错”path”:”/actuator/hystrix.stream”,”status”:404,”error”:”Not Found”
-#这是因为springboot2.x使用了endpoint,解决办法是在被监控的微服务的bootstrap.yml文件中加入如下配置
-management:
-  endpoint:
-    health:
-      show-details: always
-  endpoints:
-    web:
-      exposure:
-        include: hystrix.stream

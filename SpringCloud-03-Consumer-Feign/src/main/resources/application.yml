@@ -4,3 +4,14 @@ spring:
 
 server:
   port: 8763
+
+#springcloud 中使用 hystrix-dashboard 进行监控的时候启动报错”path”:”/actuator/hystrix.stream”,”status”:404,”error”:”Not Found”
+#这是因为springboot2.x使用了endpoint,解决办法是在被监控的微服务的bootstrap.yml文件中加入如下配置
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: "*"
