@@ -1,20 +1,18 @@
 package com.somnus.springcloud.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.somnus.springcloud.service.AdminService;
-
 @RestController
 public class AdminController {
 
-    @Autowired
-    private AdminService adminService;
+    @Value("${server.port}")
+    private String port;
 
     @GetMapping("hi")
-    public String sayHi(@RequestParam String message) {
-        return adminService.sayHi(message);
+    public String sayHi(@RequestParam(value = "message") String message) {
+        return String.format("Hi，your message is : %s i am from port : %s", message, port);
     }
 }

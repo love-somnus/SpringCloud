@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: spring-cloud-zookeeper-consumer
+
+# 注册服务的端口
+server:
+  port: 9761
+
+## 关闭安全控制
+management:
+  security:
+    enabled: false

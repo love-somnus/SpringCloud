@@ -9,15 +9,15 @@ import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 @Service
 public class AdminService {
 
-	@Autowired
-	private RestTemplate restTemplate;
+    @Autowired
+    private RestTemplate restTemplate;
 
-	@HystrixCommand(fallbackMethod = "hiError")
-	public String sayHi(String message) {
-		return restTemplate.getForObject("http://spring-cloud-client/hi?message=" + message, String.class);
-	}
+    @HystrixCommand(fallbackMethod = "hiError")
+    public String sayHi(String message) {
+        return restTemplate.getForObject("http://spring-cloud-client/hi?message=" + message, String.class);
+    }
 
-	public String hiError(String message) {
-		return "Hi，your message is :\"" + message + "\" but request error.";
-	}
+    public String hiError(String message) {
+        return "Hi，your message is :\"" + message + "\" but request error.";
+    }
 }

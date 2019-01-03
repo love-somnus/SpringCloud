@@ -10,11 +10,11 @@ import com.somnus.springcloud.service.AdminService;
 @RestController
 public class AdminController {
 
-	@Autowired
-	private AdminService adminService;
+    @Autowired
+    private AdminService adminService;
 
-	@GetMapping("hi")
-	public String sayHi(@RequestParam String message) {
-		return adminService.sayHi(message);
-	}
+    @GetMapping("hi")
+    public String sayHi(@RequestParam String message) {
+        return adminService.sayHi(message);
+    }
 }

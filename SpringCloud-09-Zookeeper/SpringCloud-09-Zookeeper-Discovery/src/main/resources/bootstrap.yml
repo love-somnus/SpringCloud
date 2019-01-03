@@ -1,0 +1,10 @@
+#配置zookeeper注册服务器地址
+spring:
+  cloud:
+    zookeeper:
+      discovery:
+        instancePort: ${server.port} #端口号
+        instanceHost: localhost  #当前服务的初始化地址（可以不填）
+        enabled: true
+        register: true
+      connectString: 121.43.162.28:2181,47.96.100.166:2181,118.24.136.237:2181

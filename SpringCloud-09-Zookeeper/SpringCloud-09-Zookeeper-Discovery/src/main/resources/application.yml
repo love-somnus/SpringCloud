@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: spring-cloud-zookeeper-discovery
+
+# 注册服务的端口
+server:
+  port: 8761
+
+## 关闭安全控制
+management:
+  security:
+    enabled: false

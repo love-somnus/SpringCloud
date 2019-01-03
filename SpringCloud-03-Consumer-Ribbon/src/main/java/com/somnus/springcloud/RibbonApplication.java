@@ -8,7 +8,7 @@ import org.springframework.cloud.netflix.hystrix.EnableHystrix;
 @SpringCloudApplication
 public class RibbonApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(RibbonApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(RibbonApplication.class, args);
+    }
 }

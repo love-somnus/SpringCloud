@@ -23,12 +23,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class ConfigController {
 
-	@Value(value = "${spring.zipkin.base-url}")
-	private String url;
+    @Value(value = "${spring.zipkin.base-url}")
+    private String url;
 
-	@GetMapping("hi")
-	public String hi() {
-		return url;
-	}
+    @GetMapping("hi")
+    public String hi() {
+        return url;
+    }
 
 }
