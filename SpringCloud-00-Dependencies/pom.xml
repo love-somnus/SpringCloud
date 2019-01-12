@@ -9,7 +9,7 @@
   </parent>
 
   <groupId>com.somnus</groupId>
-  <artifactId>springcloud-dependencies</artifactId>
+  <artifactId>SpringCloud-00-Dependencies</artifactId>
   <version>1.0.0-SNAPSHOT</version>
   <packaging>pom</packaging>
 
